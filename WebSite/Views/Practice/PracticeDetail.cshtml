@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "PracticeDetail";
+}
+
+<html>
+
+<head>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Content/Pages/DetailsPractice.js"></script>
+</head>
+
+<body>
+    <h2>Client Details</h2>
+
+    <input type="hidden" value="@ViewBag.Id" id="hdId" />
+
+    <div id="tblDetails" style="font:bold 15px arial">
+
+    </div>
+
+</body>
+</html>
+
+
+<!-- Button to trigger the modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#practiceModal">
+    Open Practice Details
+</button>
+
+<!-- The Modal -->
+<div class="modal fade" id="practiceModal" tabindex="-1" role="dialog" aria-labelledby="practiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="practiceModalLabel">Practice Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Content will be dynamically loaded here -->
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
